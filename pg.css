@@ -1,0 +1,56 @@
+
+.progress-container {
+  width: 80%;
+  height: 10px;
+  background-color: #ccc;
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+  
+}
+
+.progress-bar {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 0;
+  font-size: 6px;
+  animation: fillProgress 2s ease-in-out forwards;
+}
+
+.blue {
+  background-color: #2a4896;
+}
+
+.red {
+  background-color: #5d3b15;
+}
+
+.green {
+  background-color: #344a1f;
+}
+
+.orange {
+  background-color: #392960;
+}
+
+.progress-label {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: white;
+  font-weight: bold;
+  
+  z-index: 1;
+  font-size: 70px;
+}
+
+@keyframes fillProgress {
+  from {
+      width: 0;
+  }
+  to {
+      width: var(--percentage);
+  }
+}
